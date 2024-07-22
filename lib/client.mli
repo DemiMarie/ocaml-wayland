@@ -4,7 +4,7 @@ type t
 
 module type TRACE = Proxy.TRACE with type role = [`Client]
 
-type error_callback = object_id:int32 -> code:int32 -> message:string -> unit
+type error_callback = id:int32 -> code:int32 -> message:string -> unit
 (** [error_callback] is the type of callbacks to be invoked when a
     fatal protocol error occurs. *)
 

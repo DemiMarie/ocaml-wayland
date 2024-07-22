@@ -11,3 +11,5 @@ val connect :
 val stop : [< `Client | `Server ] t -> unit
 
 val dump : _ t Fmt.t
+
+val error : [ `Server ] t -> id:int32 -> code:int32 -> message:string -> unit
